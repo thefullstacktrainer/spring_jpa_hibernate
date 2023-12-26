@@ -3,6 +3,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.excelr.entity.Game;
+
 public class Main {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("gamePU");
@@ -10,14 +12,14 @@ public class Main {
 
         // Example: Create a new game
         em.getTransaction().begin();
-        GameH2 game = new GameH2();
-        game.setName("Volarant Game");
+        Game game = new Game();
+        game.setName("Volarant Game 2");
         em.persist(game);
         em.getTransaction().commit();
 
         // Example: Retrieve a game by ID
         em.getTransaction().begin();
-        GameH2 retrievedGame = em.find(GameH2.class, 1L);
+        Game retrievedGame = em.find(Game.class, 1L);
         System.out.println("Retrieved Game: " + retrievedGame.getName());
         em.getTransaction().commit();
 
