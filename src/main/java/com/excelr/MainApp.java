@@ -18,7 +18,7 @@ public class MainApp {
         System.out.println("Retrieved Game: " + retrievedGame.getName());
 
         // Update
-        retrievedGame.setName("Updated Game");
+        retrievedGame.setName("Updated Game Volarant");
         gameDao.updateGame(retrievedGame);
 
         // Read Again
@@ -26,6 +26,6 @@ public class MainApp {
         System.out.println("Updated Game: " + updatedGame.getName());
 
         // Delete
-        gameDao.deleteGame(newGame.getId());
+//        gameDao.deleteGame(newGame.getId());
     }
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.excelr.entity.User" table="user">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name"></property>
+		<property name="password"></property>
+		<property name="email"></property>
+	</class>
+
+</hibernate-mapping>  
