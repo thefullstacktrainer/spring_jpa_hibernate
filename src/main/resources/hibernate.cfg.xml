@@ -1,7 +1,5 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
     "hibernate-configuration-3.0.dtd">
-
-
 <hibernate-configuration>
 
 	<session-factory>
@@ -21,7 +19,9 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<!-- Mention annotated class -->
-
+		<mapping class="com.excelr.entity.e2.Employee2" />
+		<mapping class="com.excelr.entity.e2.Regular_Employee2" />
+		<mapping class="com.excelr.entity.e2.Contract_Employee2" />
 
 		<mapping resource="user.hbm.xml" />
 		<mapping resource="employee.hbm.xml" />
