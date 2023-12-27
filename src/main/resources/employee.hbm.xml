@@ -1,26 +1,34 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "hibernate-mapping-3.0.dtd">
+<!-- <hibernate-mapping> <class name="com.excelr.entity.Employee" table="employee" 
+	discriminator-value="emp"> <id name="id"> <generator class="increment"></generator> 
+	</id> <discriminator column="type" type="string"></discriminator> <property 
+	name="name"></property> <subclass name="com.excelr.entity.Regular_Employee" 
+	discriminator-value="reg_emp"> <property name="salary"></property> <property 
+	name="bonus"></property> </subclass> <subclass name="com.excelr.entity.Contract_Employee" 
+	discriminator-value="con_emp"> <property name="pay_per_hour"></property> 
+	<property name="contract_duration"></property> </subclass> </class> </hibernate-mapping> -->
+
+
 <hibernate-mapping>
-	<class name="com.excelr.entity.Employee" table="employee"
-		discriminator-value="emp">
+	<class name="com.excelr.entity.Employee" table="emp122">
 		<id name="id">
 			<generator class="increment"></generator>
 		</id>
 
-		<discriminator column="type" type="string"></discriminator>
 		<property name="name"></property>
 
-		<subclass name="com.excelr.entity.Regular_Employee"
-			discriminator-value="reg_emp">
+		<union-subclass
+			name="com.excelr.entity.Regular_Employee" table="regemp122">
 			<property name="salary"></property>
 			<property name="bonus"></property>
-		</subclass>
+		</union-subclass>
 
-		<subclass name="com.excelr.entity.Contract_Employee"
-			discriminator-value="con_emp">
+		<union-subclass
+			name="com.excelr.entity.Contract_Employee" table="contemp122">
 			<property name="pay_per_hour"></property>
 			<property name="contract_duration"></property>
-		</subclass>
+		</union-subclass>
 
 	</class>
 
