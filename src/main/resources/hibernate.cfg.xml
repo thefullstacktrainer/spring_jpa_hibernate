@@ -4,26 +4,29 @@
 
 <hibernate-configuration>
 
-    <session-factory>
-        <!-- JDBC Database connection settings -->
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/spring_tutorials</property>
-        <property name="hibernate.connection.username">admin</property>
-        <property name="hibernate.connection.password">password</property>
+	<session-factory>
+		<!-- JDBC Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/spring_tutorials</property>
+		<property name="hibernate.connection.username">admin</property>
+		<property name="hibernate.connection.password">password</property>
 
-        <!-- Specify dialect -->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- Specify dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
 
-        <!-- Echo all executed statements to stdout -->
-        <property name="hibernate.show_sql">true</property>
+		<!-- Echo all executed statements to stdout -->
+		<property name="hibernate.show_sql">true</property>
 
-        <!-- Drop and re-create the database schema on startup -->
-        <property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Mention annotated class -->
-        <mapping resource="user.hbm.xml"/>
+		<!-- Mention annotated class -->
 
-        <!-- Alternatively, you can use <mapping class="com.example.YourEntityClass"/> for annotated classes -->
 
-    </session-factory>
+		<mapping resource="user.hbm.xml" />
+		<mapping resource="employee.hbm.xml" />
+		<!-- Alternatively, you can use <mapping class="com.example.YourEntityClass"/> 
+			for annotated classes -->
+
+	</session-factory>
 </hibernate-configuration>
