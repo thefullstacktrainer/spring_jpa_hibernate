@@ -19,9 +19,11 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<!-- Mention annotated class -->
-		<mapping class="com.excelr.entity.e2.Employee2" />
-		<mapping class="com.excelr.entity.e2.Regular_Employee2" />
-		<mapping class="com.excelr.entity.e2.Contract_Employee2" />
+		<!-- <mapping class="com.excelr.entity.e2.Employee2" /> <mapping class="com.excelr.entity.e2.Regular_Employee2" 
+			/> <mapping class="com.excelr.entity.e2.Contract_Employee2" /> -->
+		<mapping class="com.excelr.entity.e3.Employee3" />
+		<mapping class="com.excelr.entity.e3.Regular_Employee3" />
+		<mapping class="com.excelr.entity.e3.Contract_Employee3" />
 
 		<mapping resource="user.hbm.xml" />
 		<mapping resource="employee.hbm.xml" />
