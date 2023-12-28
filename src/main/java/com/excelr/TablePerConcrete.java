@@ -25,40 +25,19 @@ public class TablePerConcrete {
 		Session session = factory.openSession();
 
 		Transaction t = session.beginTransaction();
-		
-		Employee e1 = new Employee();
-		e1.setName("Lakshmikant Deshpande");
-
-		Regular_Employee e2 = new Regular_Employee();
-		e2.setName("Vivek Kumar");
-		e2.setSalary(50000);
-		e2.setBonus(5);
-
-		Contract_Employee e3 = new Contract_Employee();
-		e3.setName("Arjun Kumar");
-		e3.setPay_per_hour(1000);
-		e3.setContract_duration("10 hours");
-
-		session.persist(e1);
-		session.persist(e2);
-		session.persist(e3);
-
-		t.commit();
-		session.close();
-		System.out.println("success");
-
-//		Employee3 e1 = new Employee3();
-//		e1.setName("Gaurav Chawla");
+//		
+//		Employee e1 = new Employee();
+//		e1.setName("Lakshmikant Deshpande 2");
 //
-//		Regular_Employee3 e2 = new Regular_Employee3();
-//		e2.setName("Vivek Kumar");
+//		Regular_Employee e2 = new Regular_Employee();
+//		e2.setName("Vivek Kumar 2");
 //		e2.setSalary(50000);
 //		e2.setBonus(5);
 //
-//		Contract_Employee3 e3 = new Contract_Employee3();
-//		e3.setName("Arjun Kumar");
+//		Contract_Employee e3 = new Contract_Employee();
+//		e3.setName("Arjun Kumar 2");
 //		e3.setPay_per_hour(1000);
-//		e3.setContract_duration("15 hours");
+//		e3.setContract_duration("20 hours");
 //
 //		session.persist(e1);
 //		session.persist(e2);
@@ -67,5 +46,26 @@ public class TablePerConcrete {
 //		t.commit();
 //		session.close();
 //		System.out.println("success");
+
+		Employee3 e1 = new Employee3();
+		e1.setName("Gaurav Chawla1");
+
+		Regular_Employee3 e2 = new Regular_Employee3();
+		e2.setName("Vivek Kumar1");
+		e2.setSalary(50000);
+		e2.setBonus(5);
+
+		Contract_Employee3 e3 = new Contract_Employee3();
+		e3.setName("Arjun Kumar1");
+		e3.setPay_per_hour(1000);
+		e3.setContract_duration("115 hours");
+
+		session.persist(e1);
+		session.persist(e2);
+		session.persist(e3);
+
+		t.commit();
+		session.close();
+		System.out.println("success");
 	}
 }
