@@ -25,14 +25,14 @@
 		<mapping class="com.excelr.entity.e3.Regular_Employee3" />
 		<mapping class="com.excelr.entity.e3.Contract_Employee3" />
 		 -->
-		<mapping class="com.excelr.entity.e4.Employee4" />
+<!-- 		<mapping class="com.excelr.entity.e4.Employee4" />
 		<mapping class="com.excelr.entity.e4.Regular_Employee4" />
-		<mapping class="com.excelr.entity.e4.Contract_Employee4" />
+		<mapping class="com.excelr.entity.e4.Contract_Employee4" /> -->
 
 <!-- 		<mapping resource="user.hbm.xml" />
 		<mapping resource="employee.hbm.xml" /> -->
 		<!-- Alternatively, you can use <mapping class="com.example.YourEntityClass"/> 
 			for annotated classes -->
-
+    <mapping resource="question.hbm.xml"/>  
 	</session-factory>
 </hibernate-configuration>

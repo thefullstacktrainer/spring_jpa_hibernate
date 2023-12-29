@@ -50,5 +50,6 @@
 	</class>
 </hibernate-mapping>  --> 
 
-<hibernate-mapping></hibernate-mapping>
+<hibernate-mapping>
+</hibernate-mapping>
 
