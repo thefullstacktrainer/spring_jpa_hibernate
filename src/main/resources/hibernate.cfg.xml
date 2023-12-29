@@ -21,16 +21,16 @@
 		<!-- Mention annotated class -->
 		<!-- <mapping class="com.excelr.entity.e2.Employee2" /> <mapping class="com.excelr.entity.e2.Regular_Employee2" 
 			/> <mapping class="com.excelr.entity.e2.Contract_Employee2" /> -->
-		<mapping class="com.excelr.entity.e3.Employee3" />
+<!-- 		<mapping class="com.excelr.entity.e3.Employee3" />
 		<mapping class="com.excelr.entity.e3.Regular_Employee3" />
 		<mapping class="com.excelr.entity.e3.Contract_Employee3" />
-		
+		 -->
 		<mapping class="com.excelr.entity.e4.Employee4" />
 		<mapping class="com.excelr.entity.e4.Regular_Employee4" />
 		<mapping class="com.excelr.entity.e4.Contract_Employee4" />
 
-		<mapping resource="user.hbm.xml" />
-		<mapping resource="employee.hbm.xml" />
+<!-- 		<mapping resource="user.hbm.xml" />
+		<mapping resource="employee.hbm.xml" /> -->
 		<!-- Alternatively, you can use <mapping class="com.example.YourEntityClass"/> 
 			for annotated classes -->
 
