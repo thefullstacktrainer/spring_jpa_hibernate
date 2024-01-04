@@ -1,0 +1,18 @@
+<hibernate-mapping>
+    <class name="com.excelr.collection.entity.PhoneNumber" table="phone_numbers">
+        <id name="id" type="java.lang.Long">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+
+        <property name="number" type="java.lang.String">
+            <column name="number"/>
+        </property>
+
+        <property name="type" type="java.lang.String">
+            <column name="phone_type"/>
+        </property>
+
+        <many-to-one name="employee" class="com.excelr.collection.entity.Employee" column="employee_id"/>
+    </class>
+</hibernate-mapping>
