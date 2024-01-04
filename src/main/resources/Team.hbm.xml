@@ -1,0 +1,17 @@
+<hibernate-mapping>
+    <class name="com.excelr.collection.entity.Team" table="teams">
+        <id name="id" type="java.lang.Long">
+            <column name="team_id" />
+            <generator class="identity" />
+        </id>
+
+        <property name="name" type="java.lang.String">
+            <column name="team_name" />
+        </property>
+
+        <set name="players" table="player_team" inverse="true" cascade="all">
+            <key column="team_id" />
+            <many-to-many class="com.excelr.collection.entity.Player" column="player_id" />
+        </set>
+    </class>
+</hibernate-mapping>

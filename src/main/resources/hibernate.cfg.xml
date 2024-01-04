@@ -33,7 +33,14 @@
 		<!-- <mapping resource="question.hbm.xml"/> -->
 		<!-- <mapping resource="User.hbm.xml" /> <mapping resource="Game.hbm.xml" 
 			/> -->
-		<mapping resource="employee.hbm.xml" />
-		<mapping resource="phone_number.hbm.xml" />
+		<!-- <mapping resource="employee.hbm.xml" /> <mapping resource="phone_number.hbm.xml" 
+			/> -->
+
+		<!-- <mapping resource="Player.hbm.xml" />
+		<mapping resource="Team.hbm.xml" />
+		<mapping resource="PlayerTeam.hbm.xml" /> -->
+		
+		<mapping resource="TeamPlayerData.hbm.xml" />
+		
 	</session-factory>
 </hibernate-configuration>
