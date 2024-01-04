@@ -11,7 +11,14 @@
 		<index column="game_index" /> <one-to-many class="com.excelr.collection.entity.Game" 
 		/> </list> </class> -->
 
-	<!-- User.hbm.xml -->
+
+	<!-- <class name="com.excelr.collection.entity.User" table="users"> <id 
+		name="id" type="java.lang.Long"> <column name="id" /> <generator class="identity" 
+		/> </id> <property name="username" type="java.lang.String"> <column name="username" 
+		/> </property> Mapping the bag (unordered collection) of games <bag name="games" 
+		inverse="true" cascade="all"> <key column="user_id" /> <one-to-many class="com.excelr.collection.entity.Game" 
+		/> </bag> </class> -->
+
 	<class name="com.excelr.collection.entity.User" table="users">
 		<id name="id" type="java.lang.Long">
 			<column name="id" />
@@ -22,11 +29,12 @@
 			<column name="username" />
 		</property>
 
-		<!-- Mapping the bag (unordered collection) of games -->
-		<bag name="games" inverse="true" cascade="all">
+		<!-- Mapping the set (unordered, unique collection) of games -->
+		<set name="games" table="games" inverse="true" cascade="all">
 			<key column="user_id" />
 			<one-to-many class="com.excelr.collection.entity.Game" />
-		</bag>
+		</set>
 	</class>
+
 
 </hibernate-mapping>

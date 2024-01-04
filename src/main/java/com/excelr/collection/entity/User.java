@@ -3,20 +3,22 @@ package com.excelr.collection.entity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
+import java.util.HashSet;
+import java.util.Set;
 public class User {
 
     private Long id;
     private String username;
-    private List<Game> games;
+//    private List<Game> games;
+    private Set<Game> games = new HashSet<>();
 
     public User() {
-        this.games = new ArrayList<>();
+//        this.games = new ArrayList<>();
     }
 
     public User(String username) {
         this.username = username;
-        this.games = new ArrayList<>();
+//        this.games = new ArrayList<>();
     }
 
     public void addGame(Game game) {
@@ -24,6 +26,13 @@ public class User {
         game.setUser(this);
     }
 
+    public Set<Game> getGames() {
+        return games;
+    }
+    
+    public void setGames(Set<Game> games) {
+    	this.games = games;
+    }
     public Long getId() {
         return id;
     }
@@ -40,13 +49,13 @@ public class User {
         this.username = username;
     }
 
-    public List<Game> getGames() {
-        return games;
-    }
-
-    public void setGames(List<Game> games) {
-        this.games = games;
-    }
+//    public List<Game> getGames() {
+//        return games;
+//    }
+//
+//    public void setGames(List<Game> games) {
+//        this.games = games;
+//    }
 
     @Override
     public boolean equals(Object o) {
